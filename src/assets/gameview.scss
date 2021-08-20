@@ -1,0 +1,338 @@
+.progress-bar {
+    margin: 5px;
+}
+
+.MuiAppBar-colorPrimary.header-bar-wrapper {
+    background-color: #373538;
+}
+
+.header-bar {
+    width: calc(100% - 60px);
+    margin-left: auto;
+    margin-right: auto;
+    height: 65px;
+    padding: 5px;
+    display: flex;
+    .stretch {
+        flex: 1;
+    }
+
+    .github-info {
+        flex: 0 100px;
+        cursor: pointer;
+        transition: color 0.5s ease;
+
+        &:hover{
+            transition: color 0.5s ease;
+            color: #C0C4CC;
+        }
+
+        .github-icon {
+            position: absolute;
+            top: 50%;
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+            .MuiSvgIcon-root {
+                font-size: 30px;
+            }
+        }
+        .github-text {
+            left: 45px;
+            line-height: 18px;
+            position: relative;
+            top: 50%;
+            font-size: 18px;
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+            span {
+                font-size: 12px;
+            }
+        }
+    }
+
+    .title {
+        margin-left: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .title-text{
+            line-height: 65px;
+            font-size: 26px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            transform: scale(1, 1.1) translateY(-1px);
+            -ms-transform:scale(1, 1.1) translateY(-1px);
+            -webkit-transform:scale(1, 1.1) translateY(1px);
+            -moz-transform:scale(1, 1.1) translateY(-1px);
+            -o-transform:scale(1, 1.1) translateY(-1px);
+
+            .subtitle {
+                color: #C0C4CC;
+                margin-left: 11px;
+                font-size: 16px;
+                -ms-transform: translateY(3px);
+                -webkit-transform: translateY(3px);
+                -moz-transform: translateY(3px);
+                -o-transform: translateY(3px);
+            }
+        }
+
+    }
+}
+
+.game-controller {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    .game-controller-paper {
+        margin: 5px;
+        padding: 2px 10px;
+    }
+
+    .status-button {
+        margin-left: 5px;
+        margin-right: 5px;
+        width: 125px;
+    }
+
+    .form-label-left {
+        float: left;
+        text-align: center;
+        font-size: 14px;
+        line-height: 1;
+        padding: 11px 6px 11px 6px;
+        box-sizing: border-box;
+        width: 80px;
+    }
+
+    .MuiFormControlLabel-label {
+        text-align: center;
+        height: 51px;
+        line-height: 51px;
+        vertical-align: middle;
+    }
+
+    .switch-control {
+        .MuiTypography-root.MuiFormControlLabel-label.MuiTypography-body1{
+            transform: translateY(2px);
+            font-family: 'Arvo', 'Rockwell', monospace, PingFangSC-Regular, sans-serif;
+        }
+    }
+
+    @media (pointer: coarse) {
+        .MuiSlider-root{
+            padding-top: 13px;
+            padding-bottom: 13px;
+
+            span.MuiSlider-markLabel {
+                top: 26px;
+            }
+        }
+    }
+}
+
+.doudizhu-view-container {
+    width: 1000px;
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+
+    .doudizhu-gameboard-paper {
+        height: calc(100% - 7px*2);
+        margin: 5px;
+        padding: 2px;
+    }
+
+    .doudizhu-probability-paper {
+        height: calc(100% - 5px*2);
+        margin: 5px;
+
+        .probability-player {
+            height: calc(72px - 16px*2);
+            padding: 16px;
+
+            span {
+                vertical-align: middle;
+            }
+        }
+
+        .probability-table {
+            display: table;
+            border-collapse: collapse;
+
+            width: 100%;
+            height: calc(100% - 72px);
+
+            &.with-three-landlord-cards {
+                height: calc(100% - 200px);
+                .probability-item {
+                    .playing {
+                        height: 109px;
+                    }
+                }
+            }
+
+            .probability-item {
+                display: table-row;
+
+                &:not(:first-child) {
+                    border-top: 1px solid rgba(0, 0, 0, 0.12);
+                }
+                .waiting {
+                    display: table-cell;
+                    vertical-align: middle;
+                    text-align: center;
+                }
+                .playing {
+                    -webkit-transition: background-color 0.3s ease;
+                    -ms-transition: background-color 0.3s ease;
+                    transition: background-color 0.3s ease;
+                    display: table-cell;
+                    height: 152px;
+                    vertical-align: middle;
+
+                    .playingCards ul.hand {
+                        margin-bottom: 0;
+                    }
+
+                    .probability-move {
+                        font-size: 10px;
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                    }
+                    .non-card {
+                        visibility: visible;
+                        transition: visibility 0s, opacity 0.5s;
+                        opacity: 1;
+                        display: table;
+                        width: 100%;
+                        margin-top: 5%;
+                        height: 25px;
+
+                        span {
+                            display: table-cell;
+                            vertical-align: middle;
+                            text-align: center;
+                            font-size: 16px;
+                            font-weight: bolder;
+                            text-shadow: -1px -1px 0 #fff,
+                                1px -1px 0 #fff,
+                                -1px 1px 0 #fff,
+                                1px 1px 0 #fff;
+                        }
+                    }
+                    .non-card.hide {
+                        visibility: hidden;
+                        transition: visibility 0.2s, opacity 0.15s;
+                        opacity: 0;
+                        pointer-events:none;
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+.leduc-view-container {
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+
+
+
+    .leduc-gameboard-paper {
+        height: calc(100% - 7px*2);
+        margin: 5px;
+        padding: 2px;
+    }
+
+    .leduc-probability-paper {
+        height: calc(100% - 5px*2);
+        margin: 5px;
+
+        .probability-player {
+            height: calc(72px - 16px*2);
+            padding: 16px;
+            display:table;
+            span {
+                display: table-cell;
+                vertical-align: middle;
+            }
+        }
+
+        .probability-table {
+            display: table;
+            border-collapse: collapse;
+
+            width: 100%;
+            height: calc(100% - 72px);
+
+            .probability-item {
+                display: table-row;
+
+                &:not(:first-child) {
+                    border-top: 1px solid rgba(0, 0, 0, 0.12);
+                }
+                .waiting {
+                    display: table-cell;
+                    vertical-align: middle;
+                    text-align: center;
+                }
+                .playing {
+                    -webkit-transition: background-color 0.3s ease;
+                    -ms-transition: background-color 0.3s ease;
+                    transition: background-color 0.3s ease;
+                    display: table-cell;
+                    vertical-align: middle;
+
+                    .playingCards ul.hand {
+                        margin-bottom: 0;
+                    }
+
+                    .probability-move {
+                        font-size: 20px;
+                        font-weight: bold;
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                    }
+                    .non-card {
+                        visibility: visible;
+                        transition: visibility 0s, opacity 0.5s;
+                        opacity: 1;
+                        display: table;
+                        width: 100%;
+                        margin-top: 5%;
+                        height: 25px;
+
+                        span {
+                            display: table-cell;
+                            vertical-align: middle;
+                            text-align: center;
+                            font-size: 16px;
+                            font-weight: bolder;
+                            color: #303133;
+                            text-shadow: -1px -1px 0 #fff,
+                                1px -1px 0 #fff,
+                                -1px 1px 0 #fff,
+                                1px 1px 0 #fff;
+                        }
+                    }
+                    .non-card.hide {
+                        visibility: hidden;
+                        transition: visibility 0.2s, opacity 0.15s;
+                        opacity: 0;
+                        pointer-events:none;
+                    }
+                }
+
+            }
+        }
+    }
+}
